@@ -1,0 +1,45 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#F5F5DC" rx="10" ry="10" />
+  
+  <!-- Product Package -->
+  <g transform="translate(100, 80)">
+    <!-- Package body - pouch shape -->
+    <path d="M20,0 C10,0 0,10 0,20 L0,230 C0,240 10,250 20,250 L180,250 C190,250 200,240 200,230 L200,20 C200,10 190,0 180,0 Z" fill="#5D3A1A" />
+    
+    <!-- Package top seal -->
+    <rect x="20" y="-10" width="160" height="20" rx="5" ry="5" fill="#8B4513" />
+    
+    <!-- Label -->
+    <rect x="40" y="50" width="120" height="150" fill="#D2B48C" rx="5" ry="5" />
+    
+    <!-- Label text -->
+    <text x="100" y="90" font-family="Montserrat, sans-serif" font-size="16" font-weight="700" fill="#5D3A1A" text-anchor="middle">ASAM</text>
+    <text x="100" y="120" font-family="Montserrat, sans-serif" font-size="20" font-weight="700" fill="#5D3A1A" text-anchor="middle">SUNTI</text>
+    <text x="100" y="150" font-family="Poppins, sans-serif" font-size="12" fill="#5D3A1A" text-anchor="middle">TRADISIONAL</text>
+    
+    <!-- Asam Sunti illustration -->
+    <g transform="translate(100, 190)">
+      <!-- Dried lime/lemon shapes -->
+      <ellipse cx="-15" cy="-5" rx="12" ry="10" fill="#8B4513" />
+      <ellipse cx="10" cy="-10" rx="12" ry="10" fill="#8B4513" />
+      <ellipse cx="0" cy="10" rx="12" ry="10" fill="#8B4513" />
+      
+      <!-- Texture details -->
+      <path d="M-20,-8 C-15,-12 -10,-12 -5,-8" stroke="#5D3A1A" stroke-width="1" fill="none" />
+      <path d="M5,-13 C10,-17 15,-17 20,-13" stroke="#5D3A1A" stroke-width="1" fill="none" />
+      <path d="M-5,7 C0,3 5,3 10,7" stroke="#5D3A1A" stroke-width="1" fill="none" />
+    </g>
+    
+    <!-- Weight -->
+    <text x="100" y="230" font-family="Poppins, sans-serif" font-size="14" fill="#F5F5DC" text-anchor="middle">100g</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.1" fill="#8B4513">
+    <circle cx="50" cy="50" r="20" />
+    <circle cx="350" cy="50" r="15" />
+    <circle cx="50" cy="350" r="25" />
+    <circle cx="350" cy="350" r="18" />
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#F5F5DC" rx="10" ry="10" />
+  
+  <!-- Certificate border -->
+  <rect x="10" y="10" width="180" height="180" fill="none" stroke="#8B4513" stroke-width="3" rx="8" ry="8" />
+  <rect x="15" y="15" width="170" height="170" fill="none" stroke="#5D3A1A" stroke-width="1" rx="6" ry="6" />
+  
+  <!-- Certificate content -->
+  <g transform="translate(100, 60)">
+    <!-- Seal/Badge -->
+    <circle cx="0" cy="0" r="30" fill="#D2B48C" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#8B4513" stroke-width="2" />
+    
+    <!-- Star in the middle -->
+    <path d="M0,-20 L4,-8 L17,-8 L7,0 L11,12 L0,5 L-11,12 L-7,0 L-17,-8 L-4,-8 Z" fill="#5D3A1A" />
+    
+    <!-- Text around the seal (simplified) -->
+    <path id="sealText" d="M0,-40 A40,40 0 1,1 -0.1,-40 A40,40 0 1,1 0,-40" fill="none" />
+    <text font-family="Montserrat, sans-serif" font-size="8" fill="#5D3A1A">
+      <textPath href="#sealText" startOffset="25%">CERTIFIED QUALITY • PREMIUM •</textPath>
+    </text>
+  </g>
+  
+  <!-- Certificate title -->
+  <text x="100" y="120" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#5D3A1A" text-anchor="middle">CERTIFICATE</text>
+  <text x="100" y="140" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#5D3A1A" text-anchor="middle">OF EXCELLENCE</text>
+  
+  <!-- Decorative lines -->
+  <line x1="40" y1="155" x2="160" y2="155" stroke="#8B4513" stroke-width="1" />
+  <line x1="60" y1="165" x2="140" y2="165" stroke="#8B4513" stroke-width="1" />
+  
+  <!-- Year -->
+  <text x="100" y="180" font-family="Poppins, sans-serif" font-size="10" fill="#5D3A1A" text-anchor="middle">2023</text>
+</svg>
