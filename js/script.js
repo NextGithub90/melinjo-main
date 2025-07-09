@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function startSlideshow() {
       if (window.innerWidth <= 576) {
         // Only for mobile view
-        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        slideInterval = setInterval(nextSlide, 8000); // Change slide every 8 seconds
       }
     }
 
