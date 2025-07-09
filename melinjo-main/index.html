@@ -33,6 +33,7 @@
                         <li><a href="#products" class="nav-link">Our Products</a></li>
                         <li><a href="#why-choose" class="nav-link">Why Choose Us</a></li>
                         <li><a href="#partnerships" class="nav-link">Partnerships</a></li>
+                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
@@ -347,6 +348,97 @@
         </div>
     </section>
 
+    <!-- Our Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <p>Explore our product collection</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider">
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery1.jpg" alt="Gallery Image 1">
+                            <div class="gallery-overlay">
+                                <h4>Product Showcase</h4>
+                                <p>Quality ingredients from Aceh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery2.jpg" alt="Gallery Image 2">
+                            <div class="gallery-overlay">
+                                <h4>Harvesting Process</h4>
+                                <p>Traditional methods</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourgallery3.jpg" alt="Gallery Image 3">
+                            <div class="gallery-overlay">
+                                <h4>Production Facility</h4>
+                                <p>Modern standards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery4.jpg" alt="Gallery Image 4">
+                            <div class="gallery-overlay">
+                                <h4>Packaging</h4>
+                                <p>Export-ready products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery5.jpg" alt="Gallery Image 5">
+                            <div class="gallery-overlay">
+                                <h4>Quality Control</h4>
+                                <p>Meeting global standards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery6.jpg" alt="Gallery Image 6">
+                            <div class="gallery-overlay">
+                                <h4>Sustainable Farming</h4>
+                                <p>Eco-friendly practices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery7.jpg" alt="Gallery Image 7">
+                            <div class="gallery-overlay">
+                                <h4>Local Partnerships</h4>
+                                <p>Supporting communities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="images/ourGallery8.jpg" alt="Gallery Image 8">
+                            <div class="gallery-overlay">
+                                <h4>Global Distribution</h4>
+                                <p>From Aceh to the world</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-navigation">
+                    <button class="gallery-prev">&#10094;</button>
+                    <div class="gallery-dots"></div>
+                    <button class="gallery-next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -356,30 +448,30 @@
                 <p>Interested in our products or partnership? Reach out to us today.</p>
             </div>
             <div class="contact-form">
-                <form action="#" method="post">
+                <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Phone Number">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number">
                     </div>
-                    <div class="form-group">
-                        <select name="product" required>
+                    <div class="form-group product-select">
+                        <select name="product" id="product" required>
                             <option value="" disabled selected>Select Product</option>
-                            <option value="melinjo">Raw Melinjo Chips</option>
-                            <option value="coffee">Gayo Arabica Coffee</option>
-                            <option value="palm-sugar">Palm Sugar</option>
-                            <option value="asam-sunti">Asam Sunti</option>
-                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="Raw Melinjo Chips">Raw Melinjo Chips</option>
+                            <option value="Gayo Arabica Coffee">Gayo Arabica Coffee</option>
+                            <option value="Palm Sugar">Palm Sugar</option>
+                            <option value="Asam Sunti">Asam Sunti</option>
+                            <option value="Partnership Inquiry">Partnership Inquiry</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
+                    <button type="submit" class="btn-primary">Send via WhatsApp</button>
                 </form>
             </div>
         </div>
@@ -402,6 +494,7 @@
                         <li><a href="#products">Our Products</a></li>
                         <li><a href="#why-choose">Why Choose Us</a></li>
                         <li><a href="#partnerships">Partnerships</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>

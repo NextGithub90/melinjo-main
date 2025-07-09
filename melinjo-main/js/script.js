@@ -1,5 +1,165 @@
 // Wait for DOM to load
 document.addEventListener("DOMContentLoaded", function () {
+  // Gallery Slider Functionality
+  const gallerySlider = document.querySelector(".gallery-slider");
+  const gallerySlides = document.querySelectorAll(".gallery-slide");
+  const galleryPrev = document.querySelector(".gallery-prev");
+  const galleryNext = document.querySelector(".gallery-next");
+  const galleryDots = document.querySelector(".gallery-dots");
+
+  if (gallerySlider && gallerySlides.length > 0) {
+    let currentSlide = 0;
+    let slideInterval;
+    const slideCount = gallerySlides.length;
+
+    // Create dots for navigation
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("gallery-dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        goToSlide(i);
+        resetInterval();
+      });
+      galleryDots.appendChild(dot);
+    }
+
+    // Function to go to a specific slide
+    function goToSlide(slideIndex) {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        currentSlide = slideIndex;
+        updateSlider();
+        updateDots();
+      }
+    }
+
+    // Update slider position
+    function updateSlider() {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        const slideWidth = gallerySlides[0].offsetWidth;
+        gallerySlider.scrollTo({
+          left: currentSlide * slideWidth,
+          behavior: "smooth",
+        });
+      }
+    }
+
+    // Update active dot
+    function updateDots() {
+      const dots = document.querySelectorAll(".gallery-dot");
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    }
+
+    // Next slide function
+    function nextSlide() {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlider();
+        updateDots();
+      }
+    }
+
+    // Previous slide function
+    function prevSlide() {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateSlider();
+        updateDots();
+      }
+    }
+
+    // Start automatic slideshow
+    function startSlideshow() {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+      }
+    }
+
+    // Reset interval when manually changing slides
+    function resetInterval() {
+      clearInterval(slideInterval);
+      startSlideshow();
+    }
+
+    // Event listeners for navigation buttons
+    if (galleryPrev) {
+      galleryPrev.addEventListener("click", () => {
+        prevSlide();
+        resetInterval();
+      });
+    }
+
+    if (galleryNext) {
+      galleryNext.addEventListener("click", () => {
+        nextSlide();
+        resetInterval();
+      });
+    }
+
+    // Handle swipe gestures for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    gallerySlider.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+
+    gallerySlider.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      },
+      { passive: true }
+    );
+
+    function handleSwipe() {
+      if (window.innerWidth <= 576) {
+        // Only for mobile view
+        const swipeThreshold = 50; // Minimum distance for swipe
+        if (touchEndX < touchStartX - swipeThreshold) {
+          // Swipe left - next slide
+          nextSlide();
+          resetInterval();
+        } else if (touchEndX > touchStartX + swipeThreshold) {
+          // Swipe right - previous slide
+          prevSlide();
+          resetInterval();
+        }
+      }
+    }
+
+    // Check window size and start slideshow if on mobile
+    function checkWindowSize() {
+      if (window.innerWidth <= 576) {
+        startSlideshow();
+      } else {
+        clearInterval(slideInterval);
+      }
+    }
+
+    // Initialize slider
+    checkWindowSize();
+
+    // Update on window resize
+    window.addEventListener("resize", checkWindowSize);
+  }
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const navList = document.querySelector(".nav-list");
@@ -199,3 +359,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // And also on scroll
   window.addEventListener("scroll", animateStats);
 });
+
+// WhatsApp Form Integration
+function sendToWhatsApp(event) {
+  event.preventDefault();
+
+  // Get form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const product = document.getElementById("product").value;
+  const message = document.getElementById("message").value;
+
+  // Format the message for WhatsApp
+  let whatsappMessage = `*New Inquiry from Campoeni Website*%0A%0A`;
+  whatsappMessage += `*Name:* ${name}%0A`;
+  whatsappMessage += `*Email:* ${email}%0A`;
+  whatsappMessage += `*Phone:* ${phone}%0A`;
+  whatsappMessage += `*Product:* ${product}%0A`;
+  whatsappMessage += `*Message:* ${message}%0A`;
+
+  // WhatsApp phone number (international format without + symbol)
+  const phoneNumber = "6281269088444"; // Replace with your actual WhatsApp number
+
+  // Create WhatsApp URL
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+  // Show confirmation before redirecting
+  if (confirm("You will be redirected to WhatsApp to complete your inquiry. Continue?")) {
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, "_blank");
+
+    // Reset the form
+    document.getElementById("whatsappForm").reset();
+  }
+}
