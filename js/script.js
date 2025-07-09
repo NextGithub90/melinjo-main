@@ -7,6 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Text content for both languages
   const translations = {
     en: {
+      // Navigation
+      navHome: "Home",
+      navAbout: "About Us",
+      navProducts: "Our Products",
+      navWhyChoose: "Why Choose Us",
+      navPartnerships: "Partnerships",
+      navGallery: "Gallery",
+      navContact: "Contact",
+
+      // Stats section
+      statCoffeeVariants: "Coffee Variants",
+      statPartnerFarmers: "Partner Farmers",
+      statDestinationCountries: "Destination Countries",
+      statAwards: "Awards",
+
       // Hero section
       heroTitle: "CAMPOENI",
       heroSubtitle: "Tradition in Every Taste",
@@ -43,6 +58,55 @@ document.addEventListener("DOMContentLoaded", function () {
       // Why Choose Us section
       whyChooseTitle: "Why Choose Campoeni?",
       whyChooseSubtitle: "What makes our products special",
+      processStep1Title: "Pure Ingredients",
+      processStep1Desc: "Direct from Aceh farmers, our ingredients are harvested and processed using traditional methods that preserve authentic flavors.",
+      processStep2Title: "Traditional Process",
+      processStep2Desc: "No preservatives or additives - just pure, natural ingredients prepared with time-honored techniques passed down through generations.",
+      processStep3Title: "Export Quality",
+      processStep3Desc: "All our products meet international standards with Halal, PIRT, and SCA-compliant certifications for our coffee products.",
+      processStep4Title: "Flexible Options",
+      processStep4Desc: "From flexible MOQ to global packaging standards and private labeling options, we make it easy to bring Acehnese flavors to your market.",
+      highlightText: "With Campoeni, you're not just buying ingredients — you're embracing a heritage.",
+
+      // Advantages section
+      advantagesTitle: "Our Product Advantages",
+      advantagesSubtitle: "What makes our products different and special",
+      advantage1Title: "Premium Quality",
+      advantage1Desc: "All our products are selected and processed with the highest quality standards to ensure customer satisfaction.",
+      advantage2Title: "100% Organic",
+      advantage2Desc: "We use organic and natural ingredients without the addition of harmful chemicals.",
+      advantage3Title: "Environmentally Friendly",
+      advantage3Desc: "Our production process is designed to minimize environmental impact and support sustainability.",
+
+      // Certifications section
+      certificationsTitle: "Certifications",
+      certificationsDesc: "Our products have been certified to meet the highest standards of global trade.",
+
+      // Partnerships section
+      partnershipsTitle: "Partnerships & Export Services",
+      partnershipsSubtitle: "Growing together across borders",
+      partnershipsHeading: "We welcome collaborations with:",
+      partnership1: "International wholesalers & distributors",
+      partnership2: "Organic & ethnic food brands",
+      partnership3: "Cafés, restaurants, and culinary businesses",
+      partnership4: "Private label buyers",
+      exportSupportHeading: "Export support includes:",
+      exportSupport1: "Documentation",
+      exportSupport2: "Custom labeling",
+      exportSupport3: "FOB / CIF shipping options",
+
+      // Gallery section
+      galleryTitle: "Our Gallery",
+      gallerySubtitle: "Explore our product collection",
+      gallery1Title: "Product Showcase",
+      gallery1Desc: "Quality ingredients from Aceh",
+      gallery2Title: "Harvesting Process",
+      gallery2Desc: "Traditional methods",
+      gallery3Title: "Production Facility",
+      gallery3Desc: "Modern standards",
+      gallery4Title: "Packaging",
+      gallery4Desc: "Export-ready products",
+      gallery5Title: "Quality Control",
 
       // Contact section
       contactTitle: "Contact Us",
@@ -59,6 +123,21 @@ document.addEventListener("DOMContentLoaded", function () {
       followUs: "Follow Us",
     },
     my: {
+      // Navigation
+      navHome: "Home",
+      navAbout: "Tentang Kami",
+      navProducts: "Produk Kami",
+      navWhyChoose: "Mengapa Pilih Kami",
+      navPartnerships: "Perkongsian",
+      navGallery: "Galeri",
+      navContact: "Hubungi",
+
+      // Stats section
+      statCoffeeVariants: "Varian Kopi",
+      statPartnerFarmers: "Petani Rakan",
+      statDestinationCountries: "Negara Destinasi",
+      statAwards: "Anugerah",
+
       // Hero section
       heroTitle: "CAMPOENI",
       heroSubtitle: "Tradisi Dalam Setiap Rasa",
@@ -95,6 +174,55 @@ document.addEventListener("DOMContentLoaded", function () {
       // Why Choose Us section
       whyChooseTitle: "Mengapa Pilih Campoeni?",
       whyChooseSubtitle: "Apa yang membuat produk kami istimewa",
+      processStep1Title: "Bahan Asli",
+      processStep1Desc: "Langsung dari petani Aceh, bahan-bahan kami dituai dan diproses menggunakan kaedah tradisional yang mengekalkan rasa asli.",
+      processStep2Title: "Proses Tradisional",
+      processStep2Desc: "Tiada bahan pengawet atau tambahan - hanya bahan semula jadi yang diproses dengan teknik tradisional yang diwariskan turun-temurun.",
+      processStep3Title: "Kualiti Eksport",
+      processStep3Desc: "Semua produk kami memenuhi standard antarabangsa dengan sijil Halal, PIRT, dan pematuhan SCA untuk produk kopi kami.",
+      processStep4Title: "Pilihan Fleksibel",
+      processStep4Desc: "Dari MOQ yang fleksibel hingga standard pembungkusan global dan pilihan label persendirian, kami memudahkan anda membawa rasa Aceh ke pasaran anda.",
+      highlightText: "Dengan Campoeni, anda bukan sekadar membeli bahan - anda merangkul warisan.",
+
+      // Advantages section
+      advantagesTitle: "Kelebihan Produk Kami",
+      advantagesSubtitle: "Apa yang membuat produk kami berbeza dan istimewa",
+      advantage1Title: "Kualiti Premium",
+      advantage1Desc: "Semua produk kami dipilih dan diproses dengan standard kualiti tertinggi untuk memastikan kepuasan pelanggan.",
+      advantage2Title: "100% Organik",
+      advantage2Desc: "Kami menggunakan bahan-bahan organik dan semula jadi tanpa penambahan bahan kimia berbahaya.",
+      advantage3Title: "Mesra Alam",
+      advantage3Desc: "Proses pengeluaran kami direka untuk meminimumkan kesan terhadap alam sekitar dan menyokong kelestarian.",
+
+      // Certifications section
+      certificationsTitle: "Sijil-sijil",
+      certificationsDesc: "Produk kami telah disahkan memenuhi standard tertinggi perdagangan global.",
+
+      // Partnerships section
+      partnershipsTitle: "Perkongsian & Perkhidmatan Eksport",
+      partnershipsSubtitle: "Berkembang bersama merentasi sempadan",
+      partnershipsHeading: "Kami mengalu-alukan kerjasama dengan:",
+      partnership1: "Pemborong & pengedar antarabangsa",
+      partnership2: "Jenama makanan organik & etnik",
+      partnership3: "Kafe, restoran, dan perniagaan kulinari",
+      partnership4: "Pembeli label persendirian",
+      exportSupportHeading: "Sokongan eksport termasuk:",
+      exportSupport1: "Dokumentasi",
+      exportSupport2: "Pelabelan khas",
+      exportSupport3: "Pilihan penghantaran FOB / CIF",
+
+      // Gallery section
+      galleryTitle: "Galeri Kami",
+      gallerySubtitle: "Jelajahi koleksi produk kami",
+      gallery1Title: "Pameran Produk",
+      gallery1Desc: "Bahan berkualiti dari Aceh",
+      gallery2Title: "Proses Penuaian",
+      gallery2Desc: "Kaedah tradisional",
+      gallery3Title: "Kemudahan Pengeluaran",
+      gallery3Desc: "Standard moden",
+      gallery4Title: "Pembungkusan",
+      gallery4Desc: "Produk sedia untuk dieksport",
+      gallery5Title: "Kawalan Kualiti",
 
       // Contact section
       contactTitle: "Hubungi Kami",
@@ -128,6 +256,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update content based on selected language
   function updateContent(lang) {
     const content = translations[lang];
+
+    // Update Navigation
+    const navLinks = document.querySelectorAll(".nav-list .nav-link");
+    if (navLinks.length >= 7) {
+      // Skip Home translation as per requirement
+      // navLinks[0].textContent = content.navHome;
+      navLinks[1].textContent = content.navAbout;
+      navLinks[2].textContent = content.navProducts;
+      navLinks[3].textContent = content.navWhyChoose;
+      navLinks[4].textContent = content.navPartnerships;
+      navLinks[5].textContent = content.navGallery;
+      navLinks[6].textContent = content.navContact;
+    }
+
+    // Update Stats Section
+    const statTexts = document.querySelectorAll(".stat-text");
+    if (statTexts.length >= 4) {
+      statTexts[0].textContent = content.statCoffeeVariants;
+      statTexts[1].textContent = content.statPartnerFarmers;
+      statTexts[2].textContent = content.statDestinationCountries;
+      statTexts[3].textContent = content.statAwards;
+    }
 
     // Update Hero Section
     document.querySelector(".hero-content h2").textContent = content.heroTitle;
@@ -188,6 +338,93 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update Why Choose Us Section
     document.querySelector("#why-choose .section-header h2").textContent = content.whyChooseTitle;
     document.querySelector("#why-choose .section-header p").textContent = content.whyChooseSubtitle;
+
+    // Update Process Steps in Why Choose Us Section
+    const processSteps = document.querySelectorAll(".process-step");
+    if (processSteps.length >= 4) {
+      processSteps[0].querySelector("h3").textContent = content.processStep1Title;
+      processSteps[0].querySelector("p").textContent = content.processStep1Desc;
+
+      processSteps[1].querySelector("h3").textContent = content.processStep2Title;
+      processSteps[1].querySelector("p").textContent = content.processStep2Desc;
+
+      processSteps[2].querySelector("h3").textContent = content.processStep3Title;
+      processSteps[2].querySelector("p").textContent = content.processStep3Desc;
+
+      processSteps[3].querySelector("h3").textContent = content.processStep4Title;
+      processSteps[3].querySelector("p").textContent = content.processStep4Desc;
+    }
+
+    // Update highlight text in Why Choose Us Section
+    document.querySelector(".highlight-text").textContent = content.highlightText;
+
+    // Update Advantages Section
+    document.querySelector(".advantages .section-header h2").textContent = content.advantagesTitle;
+    document.querySelector(".advantages .section-header p").textContent = content.advantagesSubtitle;
+
+    const advantageItems = document.querySelectorAll(".advantage-item");
+    if (advantageItems.length >= 3) {
+      advantageItems[0].querySelector("h3").textContent = content.advantage1Title;
+      advantageItems[0].querySelector("p").textContent = content.advantage1Desc;
+
+      advantageItems[1].querySelector("h3").textContent = content.advantage2Title;
+      advantageItems[1].querySelector("p").textContent = content.advantage2Desc;
+
+      advantageItems[2].querySelector("h3").textContent = content.advantage3Title;
+      advantageItems[2].querySelector("p").textContent = content.advantage3Desc;
+    }
+
+    // Update Certifications Section
+    document.querySelector(".certifications h2").textContent = content.certificationsTitle;
+    document.querySelector(".certifications p").textContent = content.certificationsDesc;
+
+    // Update Partnerships Section
+    document.querySelector("#partnerships .section-header h2").textContent = content.partnershipsTitle;
+    document.querySelector("#partnerships .section-header p").textContent = content.partnershipsSubtitle;
+
+    const partnershipHeadings = document.querySelectorAll("#partnerships .about-text h4");
+    if (partnershipHeadings.length >= 2) {
+      partnershipHeadings[0].textContent = content.partnershipsHeading;
+      partnershipHeadings[1].textContent = content.exportSupportHeading;
+    }
+
+    const partnershipItems = document.querySelectorAll("#partnerships .about-features li");
+    if (partnershipItems.length >= 4) {
+      partnershipItems[0].textContent = content.partnership1;
+      partnershipItems[1].textContent = content.partnership2;
+      partnershipItems[2].textContent = content.partnership3;
+      partnershipItems[3].textContent = content.partnership4;
+    }
+
+    const exportSupportTags = document.querySelectorAll(".export-support .support-tag");
+    if (exportSupportTags.length >= 3) {
+      exportSupportTags[0].textContent = content.exportSupport1;
+      exportSupportTags[1].textContent = content.exportSupport2;
+      exportSupportTags[2].textContent = content.exportSupport3;
+    }
+
+    // Update Gallery Section
+    document.querySelector("#gallery .section-header h2").textContent = content.galleryTitle;
+    document.querySelector("#gallery .section-header p").textContent = content.gallerySubtitle;
+
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    if (galleryItems.length >= 5) {
+      galleryItems[0].querySelector("h4").textContent = content.gallery1Title;
+      galleryItems[0].querySelector("p").textContent = content.gallery1Desc;
+
+      galleryItems[1].querySelector("h4").textContent = content.gallery2Title;
+      galleryItems[1].querySelector("p").textContent = content.gallery2Desc;
+
+      galleryItems[2].querySelector("h4").textContent = content.gallery3Title;
+      galleryItems[2].querySelector("p").textContent = content.gallery3Desc;
+
+      galleryItems[3].querySelector("h4").textContent = content.gallery4Title;
+      galleryItems[3].querySelector("p").textContent = content.gallery4Desc;
+
+      if (galleryItems[4].querySelector("h4")) {
+        galleryItems[4].querySelector("h4").textContent = content.gallery5Title;
+      }
+    }
 
     // Update Contact Section
     document.querySelector("#contact .section-header h2").textContent = content.contactTitle;
